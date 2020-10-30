@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hide and show through the Javascript Custom Method</title>
+</head>
+
+<body>
+
+<button id="widget_price" class="hello" style="font-size: 20px">Click here (Hide and show )</button>
+<div id="widget_price_tog" style="display:block">
+	<p>This example uses the HTML DOM to assign an "onclick" event to a p element.</p>
+</div>
+
+<script>
+document.getElementById("widget_price").onclick = function(){
+	myfunction()
+}; 
+function myfunction(){
+ 		var x = document.getElementById("widget_price_tog");
+ 		var y = document.getElementById("icon-vect");
+	 	if(x.style.display === "block") {
+	 		x.style.display = "none";
+	 		y.classList.add("icon-wd-plus");
+	 		y.classList.remove("icon-wd-minus"); 		 		
+
+	 	} else {
+	 		x.style.display = "block";
+	 		y.classList.add("icon-wd-minus");
+	 		y.classList.remove("icon-wd-plus");	 		
+
+	 	}
+ }
+</script>
+
+</body>
+
+</html>
